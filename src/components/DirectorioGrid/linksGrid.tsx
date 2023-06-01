@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
+import getCategoryColor from '../Utilities/getCategoryColor';
 import { BiTime } from 'react-icons/bi';
 import { CardHrsInline } from './cardHrsInline';
 import { CardImg } from './cardImg';
@@ -36,7 +37,10 @@ const LinksGrid = ({
             </CardImg>
             {onlyImage && (
               <CardTextContainer>
-                <CardTag backgraundColor={post.color} className="tag"></CardTag>
+                <CardTag
+                  backgraundColor={getCategoryColor(post.tag)}
+                  className="tag"
+                ></CardTag>
                 <CardTitle className="title">{post.title}</CardTitle>
                 <CardHrsInline>
                   <BiTime size={12} />

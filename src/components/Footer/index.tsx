@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoP from '@/images/logo-sc-bw.png';
+import LogoP from '@/images/logo.png';
 import LogoSC from '@/images/logo_bw.png';
 import React from 'react';
 import styled from 'styled-components';
@@ -32,19 +32,19 @@ const Footer = () => {
               <AiFillCalendar size={20} color="var(--color-blanco)" />
             </IconWithText>
             <IconWithText
-              text="Industriales del Pte. 1050, Sin Nombre de Col 3, 66370 Santa Catarina, N.L."
-              link="https://goo.gl/maps/SA5fdQRwMeJhf5PTA"
+              text="Av. Sendero Divisorio 1001, Privadas de Anáhuac, Cerrada de Anáhuac Residencial, 66410 Cd Gral Escobedo, N.L."
+              link="https://goo.gl/maps/1KcmbkuN4WHjdfTE8"
             >
               <HiLocationMarker size={20} color="var(--color-blanco)" />
             </IconWithText>
-            <IconWithText text="+52 (811)-133-8835" link="tel: 8111338835">
+            <IconWithText text="+52 (818)-302-3018" link="tel: +528183023018">
               <BsFillTelephoneFill size={20} color="var(--color-blanco)" />
             </IconWithText>
           </Column>
           <Column title="Mapa del Sitio">
             <List>
               <li>
-                <Link color="var(--color-gris)" href="/">
+                <Link color="var(--color-blanco)" href="/">
                   Inicio
                 </Link>
               </li>
@@ -58,14 +58,14 @@ const Footer = () => {
                 <Link href="/promociones">Promociones</Link>
               </li>
               <li>
-                <Link href="#footer">Nosotros</Link>
+                <Link href="#footer">Contacto</Link>
               </li>
             </List>
           </Column>
           <Column title="Siguenos">
             <SocialRow>
               <SocialLink
-                href="https://www.facebook.com/ElPaseoSantaCatarina"
+                href="https://www.facebook.com/plazabellaanahuac/"
                 target="_blank"
                 fontSize="20px"
                 variant="rounded"
@@ -73,7 +73,7 @@ const Footer = () => {
                 <FaFacebookF />
               </SocialLink>
               <SocialLink
-                href="https://www.instagram.com/elpaseosantacatarina/"
+                href="https://www.instagram.com/plazabellaanahuac"
                 target="_blank"
                 fontSize="20px"
                 variant="rounded"
@@ -91,7 +91,7 @@ const Footer = () => {
               <Logos side="left">
                 <Image src={LogoP} alt="Logo Planigrupo" />
               </Logos>
-              <Logos color="var(--color-gris)" side="left">
+              <Logos color="var(--color-blanco)" side="left">
                 <Image src={LogoSC} alt="Logo Plaza Santa Catarina" />
               </Logos>
             </LogosDiv>
@@ -157,18 +157,18 @@ const List = styled.ul`
   padding: 0;
 
   a {
-    color: var(--color-gris);
+    color: var(--color-blanco);
     transition: color 0.3s;
 
     &:hover {
-      color: var(--color-blanco);
+      color: var(--color-principal);
     }
   }
 `;
 
 const NavLink = styled.div`
   align-items: center;
-  color: var(--color-gris);
+  color: var(--color-blanco);
   display: grid;
   height: auto;
   justify-content: center;

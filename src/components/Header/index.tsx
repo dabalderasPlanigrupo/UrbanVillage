@@ -5,7 +5,7 @@ import { Menu, MenuItem } from './menu';
 import { HeaderBlock } from './headerBlock';
 import { HamburguerButton } from './hamburguerButton';
 import Link from 'next/link';
-import LogoImage from '@/images/logo-sc-bw.png';
+import LogoImage from '@/images/logo.png';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

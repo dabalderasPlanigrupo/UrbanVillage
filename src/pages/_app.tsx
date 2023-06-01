@@ -41,7 +41,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 const GlobalStyle = createGlobalStyle`
   :root {
     --color-principal: #FDC60B;
-    --color-secundario: #1B3089;
+    --color-secundario: #D7282F;
     --color-blanco: #fff;
     --color-negro: #000;
     --color-gris: #969696;

@@ -23,7 +23,7 @@ const LeftImg = styled.div`
   left: 0;
   max-width: 30%;
   position: absolute;
-  transform: translateY(35%);
+  transform: translateY(46%);
   z-index: 5;
 `;
 

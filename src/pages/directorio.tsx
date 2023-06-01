@@ -1,9 +1,9 @@
 import Hero404 from '@/components/Hero404';
-import HeroImage from '@/images/RECURSOS_FONDO_2.png';
+import HeroImage from '@/images/RECURSOS_FONDO_2.jpg';
 import Image from 'next/image';
 import MapImg1 from '@/images/MapImg1.jpg';
-import MapImg2 from '@/images/MapImg2.jpg';
-import MapImg3 from '@/images/MapImg3.jpg';
+import getCategoryColor from '@/components/Utilities/getCategoryColor';
+import getCategoryName from '@/components/Utilities/getCategoryName';
 import { BsListNested } from 'react-icons/bs';
 import { BsMap } from 'react-icons/bs';
 import { ButtonOutline } from '@/components/Utilities/buttonOutline';
@@ -19,6 +19,7 @@ import { useState, useEffect } from 'react';
 import { IconWithText } from '@/components/Footer/iconWithText';
 import { MapImg } from '@/components/Utilities/mapImg';
 import dynamic from 'next/dynamic';
+import { SectionFooter } from '@/components/Utilities/sectionFooter';
 
 const Select = dynamic(
   () => import('react-select').then((mod) => mod.default),
@@ -116,22 +117,6 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
     setSearchedName(e.value);
   };
 
-  const getCategoryColor = (category: any) => {
-    const dictionary: any = {
-      Todo: '#1B3089',
-      'restaurantes y alimentos': '#E84865',
-      'tiendas departamentales': '#00AAC3',
-      servicios: '#EC6E29',
-      'bancos y servicios financieros': '#FFD444',
-      'salud y belleza': '#45AC4C',
-      'ropa y accesorios': '#7B4795',
-      entretenimiento: '#406FB4',
-      'servicio automotriz': '#C35B9D',
-    };
-
-    return dictionary[category];
-  };
-
   return (
     <>
       <Hero404
@@ -140,7 +125,7 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
         text="Ven y vive la experiencia con nosotros"
       />
       <Container>
-        <Section>
+        <SectionFooter>
           <FooterRow Columns="1fr 1fr">
             <Inline>
               <Column>
@@ -159,20 +144,6 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
                       color={'var(--color-principal)'}
                     >
                       LEVEL 1
-                    </ButtonOutline>
-                    <ButtonOutline
-                      onClick={() => setViewMapMode('level2')}
-                      active={viewMapMode === 'level2'}
-                      color={'var(--color-principal)'}
-                    >
-                      LEVEL 3
-                    </ButtonOutline>
-                    <ButtonOutline
-                      onClick={() => setViewMapMode('level3')}
-                      active={viewMapMode === 'level3'}
-                      color={'var(--color-principal)'}
-                    >
-                      LEVEL 3
                     </ButtonOutline>
                   </>
                 )}
@@ -201,13 +172,13 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
               </Column>
             </Inline>
           </FooterRow>
-        </Section>
+        </SectionFooter>
       </Container>
 
       {viewMode === 'lista' && (
         <>
           <Container>
-            <Section>
+            <SectionFooter>
               <Inline>
                 {tags?.map((tag: string, index: number) => (
                   <ButtonOutline
@@ -216,11 +187,11 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
                     key={index}
                     color={getCategoryColor(tag)}
                   >
-                    {tag}
+                    {getCategoryName(tag)}
                   </ButtonOutline>
                 ))}
               </Inline>
-            </Section>
+            </SectionFooter>
           </Container>
 
           <LinksGrid
@@ -235,41 +206,19 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
       {viewMode === 'mapa' && (
         <>
           <Container>
-            <Section>
+            <SectionFooter>
               {viewMapMode === 'level1' && (
                 <MapImg>
                   <Image
                     src={MapImg1}
-                    width={1000}
-                    height={1000}
+                    width={2000}
+                    height={1200}
                     alt="Mapa Santa Catarina 1"
                     max-width="100%"
                   />
                 </MapImg>
               )}
-              {viewMapMode === 'level2' && (
-                <MapImg>
-                  <Image
-                    src={MapImg2}
-                    width={1000}
-                    height={1000}
-                    alt="Mapa Santa Catarina 2"
-                    max-width="100%"
-                  />
-                </MapImg>
-              )}
-              {viewMapMode === 'level3' && (
-                <MapImg>
-                  <Image
-                    src={MapImg3}
-                    width={1000}
-                    height={1000}
-                    alt="Mapa Santa Catarina 3"
-                    max-width="100%"
-                  />
-                </MapImg>
-              )}
-            </Section>
+            </SectionFooter>
           </Container>
         </>
       )}

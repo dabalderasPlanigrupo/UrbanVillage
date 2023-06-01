@@ -1,13 +1,13 @@
 /* eslint-disable */
-import BackgroundImage from '@/images/RECURSOS_FONDO_1.png';
+import BackgroundImage from '@/images/RECURSOS_FONDO_1.jpg';
 import Hero from '@/components/Hero';
-import RightImg from '@/images/RECURSOS_ONDA_3.png';
-import LeftImg from '@/images/RECURSOS_ONDA_2.png';
+import RightImg from '@/images/Elemento-2.png';
+import LeftImg from '@/images/Elemento-3.png';
 import ImagePersonas from '@/images/RECURSOS_PERSONAS.png';
 import LastPostSection from '@/components/LastPostSection';
 import OurNumbers from '@/components/OurNumbers';
 import { useState, useEffect } from 'react';
-import StoresImage from '@/images/RECURSOS_FONDO_2.png';
+import StoresImage from '@/images/RECURSOS_FONDO_2.jpg';
 import TextImage from '@/images/RECURSOS_FRASE.png';
 import { PostType } from '@/types/posts';
 import { Stores } from '@/components/Stores';

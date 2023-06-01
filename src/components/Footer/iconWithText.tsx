@@ -35,14 +35,14 @@ const ContainerIwT = styled.li<{ marginTop?: string }>`
 `;
 
 const Description = styled.a<{ color?: string }>`
-  color: ${({ color }) => color || 'var(--color-gris)'};
+  color: ${({ color }) => color || 'var(--color-blanco)'};
   grid-area: 1/2;
   margin-left: 10px;
   max-width: 385px;
   transition: color 0.3s;
 
   &:hover {
-    color: var(--color-blanco);
+    color: var(--color-principal);
   }
   ${device.desktop} {
     max-width: 420px;
