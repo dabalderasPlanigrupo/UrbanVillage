@@ -143,7 +143,7 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
                       active={viewMapMode === 'level1'}
                       color={'var(--color-principal)'}
                     >
-                      LEVEL 1
+                      Planta Baja
                     </ButtonOutline>
                   </>
                 )}
