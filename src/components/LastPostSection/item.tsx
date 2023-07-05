@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import { FcLike } from 'react-icons/fc';
 import { device } from '@/utils/devices';
 
-const Item = ({ image, likes }: { image?: ReactNode; likes: number }) => {
+const Item = ({ image, likes }: { image?: ReactNode; likes?: number }) => {
   return (
     <PostContainer>
       {image}
       <PostContentContainer>
-        <FcLike size={25} />
-        <Number>{likes}</Number>
+        {/* <FcLike size={25} />
+        <Number>{likes}</Number> */}
       </PostContentContainer>
     </PostContainer>
   );

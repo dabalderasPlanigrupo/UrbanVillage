@@ -5,13 +5,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import BgImage from '../bgImage';
 import Image from 'next/image';
+import styled from 'styled-components';
 import { CardImg } from '../DirectorioGrid/cardImg';
+import { Container } from '../Utilities/container';
 import { Navigation } from 'swiper';
 import { PostType } from '@/types/posts';
 import { Row } from './row';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { TitleWithIcon } from '../Utilities/titleWithIcon';
-import { Container } from '../Utilities/container';
+import { device } from '@/utils/devices';
 
 type StaticImageData = {
   src: string;
@@ -26,11 +28,30 @@ type StaticRequire = {
 
 type StaticImport = StaticRequire | StaticImageData;
 
+const LeftImg = styled.div`
+  bottom: 0;
+  left: 0;
+  max-width: 60%;
+  position: absolute;
+  transform: translateY(115%);
+  z-index: 5;
+
+  ${device.tablet} {
+    max-width: 40%;
+  }
+
+  ${device.desktop} {
+    max-width: 28%;
+  }
+`;
+
 const Stores = ({
   backgroundImage,
+  image,
   items,
 }: {
   backgroundImage: string | StaticImport;
+  image: string | StaticImport;
   items: Array<PostType>;
 }) => {
   return (
@@ -81,6 +102,9 @@ const Stores = ({
           </Swiper>
         </Row>
       </Container>
+      <LeftImg>
+        <Image src={image} height={679} width={1032} alt="Imagen del Hero" />
+      </LeftImg>
     </BgImage>
   );
 };

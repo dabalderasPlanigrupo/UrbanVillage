@@ -32,7 +32,7 @@ const Promociones = ({ posts }: IndexProps): JSX.Element => {
       <Hero404
         backgroundImage={HeroImage}
         title="Promociones"
-        text="¡Aprobecha y ven con nosotros!"
+        text="¡Aprovecha y ven con nosotros!"
       />
 
       <LinksGrid

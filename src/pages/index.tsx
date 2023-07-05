@@ -38,8 +38,12 @@ const Home = ({ posts }: IndexProps): JSX.Element => {
         cornerImage={RightImg.src}
         centerImage={ImagePersonas}
       />
-      <OurNumbers image={LeftImg} />
-      <Stores backgroundImage={StoresImage} items={postsFiltered} />
+      {/* <OurNumbers image={LeftImg} /> */}
+      <Stores
+        image={LeftImg}
+        backgroundImage={StoresImage}
+        items={postsFiltered}
+      />
       <LastPostSection />
     </>
   );

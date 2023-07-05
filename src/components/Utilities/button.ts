@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '@/utils/devices';
 
-const Button = styled.button<{ buttonColor: string }>`
+const Button = styled.a<{ buttonColor?: string }>`
   background-color: var(--color-principal);
   border: 2px solid var(--color-principal);
   border-color: var(--color-principal);

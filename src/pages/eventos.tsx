@@ -32,7 +32,7 @@ const Eventos = ({ posts }: IndexProps): JSX.Element => {
       <Hero404
         backgroundImage={HeroImage}
         title="Eventos"
-        text="Aqui puedes encontrar los eventos"
+        text="¡Ven y vive momentos inolvidables!"
       />
 
       <LinksGrid

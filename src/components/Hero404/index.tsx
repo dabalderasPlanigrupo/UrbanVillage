@@ -22,7 +22,7 @@ const FullHeight = styled(BgImage)`
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 75vh;
 `;
 
 const Hero404 = ({

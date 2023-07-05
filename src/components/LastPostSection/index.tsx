@@ -1,8 +1,10 @@
-import { Section } from '../Utilities/section';
+import { Button } from '../Utilities/button';
+import { Container } from '../Utilities/container';
 import { Elements } from './elements';
 import { FbPostsList } from '../homeList';
+import { Inline } from '../Utilities/inline';
+import { Section } from '../Utilities/section';
 import { TitleWithIcon } from '../Utilities/titleWithIcon';
-import { Container } from '../Utilities/container';
 
 const LastPostSection = () => {
   return (
@@ -15,6 +17,14 @@ const LastPostSection = () => {
           Nosotros
         </TitleWithIcon>
         <Elements fbPostsList={FbPostsList} />
+        <Inline>
+          <Button
+            buttonColor="var(--color-blanco)"
+            href="https://www.facebook.com/plazabellaanahuac/photos"
+          >
+            Ver más
+          </Button>
+        </Inline>
       </Container>
     </Section>
   );
