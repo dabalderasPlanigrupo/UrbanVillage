@@ -1,6 +1,5 @@
 import GetFormatDate from '@/components/Utilities/getFormateDate';
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 import { CardTextContainer } from './cardTextContainer';
 import { Grid } from './grid';
@@ -9,20 +8,17 @@ const LinksGrid = ({
   className,
   gridItems,
   id,
-  linkPrefix,
   onlyImage = false,
 }: {
   className?: string;
   gridItems: Array<PostType>;
   id: string;
-  linkPrefix: string;
   onlyImage: boolean;
 }) => {
   return (
     <Grid id={id} className={className}>
       {gridItems.map((post, index) => (
-        // <Link href={`/${linkPrefix}/${post.path}`} key={index}>
-        <CardStyles>
+        <CardStyles key={index}>
           <CardImage>
             <Image
               src={'/multimedia/' + post.imagen}
@@ -37,7 +33,6 @@ const LinksGrid = ({
             </CardTextContainer>
           )}
         </CardStyles>
-        // </Link>
       ))}
     </Grid>
   );

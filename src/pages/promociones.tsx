@@ -35,12 +35,7 @@ const Promociones = ({ posts }: IndexProps): JSX.Element => {
         text="¡Aprovecha y ven con nosotros!"
       />
 
-      <LinksGrid
-        id="promociones"
-        gridItems={postsFiltered}
-        linkPrefix="promociones"
-        onlyImage={true}
-      />
+      <LinksGrid id="promociones" gridItems={postsFiltered} onlyImage={true} />
       <Container>
         <Section backgroundColor="var(--color-blanco)">
           <TitleSection textColor="var(--color-principal)">

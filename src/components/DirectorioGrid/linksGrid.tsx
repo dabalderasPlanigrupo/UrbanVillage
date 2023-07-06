@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 import getCategoryColor from '../Utilities/getCategoryColor';
 import { BiTime } from 'react-icons/bi';
@@ -14,42 +13,38 @@ const LinksGrid = ({
   className,
   id,
   gridItems,
-  linkPrefix,
   onlyImage,
 }: {
   className?: string;
   id: string;
   gridItems: Array<PostType>;
-  linkPrefix: string;
   onlyImage: boolean;
 }) => {
   return (
     <Grid id={id} className={className}>
       {gridItems.map((post, index) => (
-        <Link href={`/${linkPrefix}/${post.slug}`} key={index}>
-          <CardStyles>
-            <CardImg>
-              <Image
-                src={'/multimedia/' + post.imagen}
-                layout="fill"
-                alt={post.title}
-              />
-            </CardImg>
-            {onlyImage && (
-              <CardTextContainer>
-                <CardTag
-                  backgraundColor={getCategoryColor(post.tag)}
-                  className="tag"
-                ></CardTag>
-                <CardTitle className="title">{post.title}</CardTitle>
-                <CardHrsInline>
-                  <BiTime size={12} />
-                  <span className="horario">{' ' + post.horario}</span>
-                </CardHrsInline>
-              </CardTextContainer>
-            )}
-          </CardStyles>
-        </Link>
+        <CardStyles key={index}>
+          <CardImg>
+            <Image
+              src={'/multimedia/' + post.imagen}
+              layout="fill"
+              alt={post.title}
+            />
+          </CardImg>
+          {onlyImage && (
+            <CardTextContainer>
+              <CardTag
+                backgraundColor={getCategoryColor(post.tag)}
+                className="tag"
+              ></CardTag>
+              <CardTitle className="title">{post.title}</CardTitle>
+              <CardHrsInline>
+                <BiTime size={12} />
+                <span className="horario">{' ' + post.horario}</span>
+              </CardHrsInline>
+            </CardTextContainer>
+          )}
+        </CardStyles>
       ))}
     </Grid>
   );

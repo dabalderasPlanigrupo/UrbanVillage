@@ -197,7 +197,6 @@ const Directorio = ({ posts }: IndexProps): JSX.Element => {
           <LinksGrid
             id="directorio"
             gridItems={filteresPosts}
-            linkPrefix="directorio"
             onlyImage={showOnlyImage}
           />
         </>

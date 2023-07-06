@@ -35,12 +35,7 @@ const Eventos = ({ posts }: IndexProps): JSX.Element => {
         text="¡Ven y vive momentos inolvidables!"
       />
 
-      <LinksGrid
-        id="eventos"
-        gridItems={postsFiltered}
-        linkPrefix="eventos"
-        onlyImage={true}
-      />
+      <LinksGrid id="eventos" gridItems={postsFiltered} onlyImage={true} />
 
       <Container>
         <Section backgroundColor="var(--color-blanco)">
