@@ -21,23 +21,23 @@ const LinksGrid = ({
   return (
     <Grid id={id} className={className}>
       {gridItems.map((post, index) => (
-        <Link href={`/${linkPrefix}/${post.path}`} key={index}>
-          <CardStyles>
-            <CardImage>
-              <Image
-                src={'/multimedia/' + post.imagen}
-                layout="fill"
-                alt={post.title}
-              />
-            </CardImage>
-            {onlyImage === false && (
-              <CardTextContainer>
-                <span className="date">{GetFormatDate(post.date)}</span>
-                <h4 className="title">{post.title}</h4>
-              </CardTextContainer>
-            )}
-          </CardStyles>
-        </Link>
+        // <Link href={`/${linkPrefix}/${post.path}`} key={index}>
+        <CardStyles>
+          <CardImage>
+            <Image
+              src={'/multimedia/' + post.imagen}
+              layout="fill"
+              alt={post.title}
+            />
+          </CardImage>
+          {onlyImage === false && (
+            <CardTextContainer>
+              <span className="date">{GetFormatDate(post.date)}</span>
+              <h4 className="title">{post.title}</h4>
+            </CardTextContainer>
+          )}
+        </CardStyles>
+        // </Link>
       ))}
     </Grid>
   );
