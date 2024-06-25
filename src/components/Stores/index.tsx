@@ -28,22 +28,22 @@ type StaticRequire = {
 
 type StaticImport = StaticRequire | StaticImageData;
 
-const LeftImg = styled.div`
-  bottom: 0;
-  left: 0;
-  max-width: 60%;
-  position: absolute;
-  transform: translateY(115%);
-  z-index: 5;
+// const LeftImg = styled.div`
+//   bottom: 0;
+//   left: 0;
+//   max-width: 60%;
+//   position: absolute;
+//   transform: translateY(115%);
+//   z-index: 5;
 
-  ${device.tablet} {
-    max-width: 40%;
-  }
+//   ${device.tablet} {
+//     max-width: 40%;
+//   }
 
-  ${device.desktop} {
-    max-width: 28%;
-  }
-`;
+//   ${device.desktop} {
+//     max-width: 28%;
+//   }
+// `;
 
 const Stores = ({
   backgroundImage,
@@ -102,9 +102,9 @@ const Stores = ({
           </Swiper>
         </Row>
       </Container>
-      <LeftImg>
+      {/* <LeftImg>
         <Image src={image} height={679} width={1032} alt="Imagen del Hero" />
-      </LeftImg>
+      </LeftImg> */}
     </BgImage>
   );
 };
