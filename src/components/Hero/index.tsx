@@ -28,11 +28,11 @@ const HeroWrapper = styled.div`
 
 const CornerImage = styled.img`
   bottom: 0;
-  max-height: 50%;
+  max-height: 65%;
   max-width: 80%;
   position: absolute;
   right: 0;
-  transform: translateY(20%);
+  transform: translateY(35%);
   z-index: 5;
 `;
 
@@ -69,7 +69,7 @@ const Title = styled.div`
   flex-shrink: 1;
   margin-bottom: 50px;
   max-width: 500px;
-  width: 80%;
+  width: 100%;
 
   ${device.tablet} {
     margin-bottom: 100px;
@@ -100,7 +100,7 @@ const Hero = ({
       </BackgroundImage>
       <HeroContainer>
         <Title>
-          <Image src={textImg} height={975} width={1120} alt="" />
+          <Image src={textImg} height={670} width={2000} alt="" />
         </Title>
 
         <HeroImage>

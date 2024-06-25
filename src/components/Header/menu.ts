@@ -42,13 +42,13 @@ const MenuItem = styled.li<{ textColor?: string }>`
   text-transform: uppercase;
 
   a {
-    color: ${({ textColor }) => textColor || 'var(--color-blanco)'};
+    color: ${({ textColor }) => textColor || 'var(--color-principal)'};
     font-weight: bold;
     font-size: 35px;
     transition: color 0.3s;
 
     :hover {
-      color: var(--color-principal);
+      color: var(--color-blanco);
     }
   }
 

@@ -1,5 +1,5 @@
 import Hero404 from '@/components/Hero404';
-import HeroImage from '@/images/RECURSOS_FONDO_2.jpg';
+import HeroImage from '@/images/Locatario.png';
 import Image from 'next/image';
 import MapImg1 from '@/images/MapImg1.jpg';
 import getCategoryColor from '@/components/Utilities/getCategoryColor';

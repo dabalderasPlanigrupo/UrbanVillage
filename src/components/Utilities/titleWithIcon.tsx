@@ -1,25 +1,29 @@
 import styled from 'styled-components';
 import { device } from '@/utils/devices';
 
-const TitleWithIcon = styled.h2<{ textColor?: string; iconColor?: string }>`
+const TitleWithIcon = styled.h2<{
+  textColor?: string;
+  iconColor?: string;
+  margin?: string;
+}>`
   align-items: center;
   color: ${({ textColor }) => textColor || 'var(--color-negro)'};
   display: flex;
   font-size: 18px;
   justify-content: left;
-  margin-bottom: 30px;
+  margin-bottom: ${({ margin }) => margin || '30px'};
 
   ::after {
     border-top: 2px solid
       ${({ iconColor }) => iconColor || 'var(--color-principal)'};
     content: '';
-    margin-left: 15px;
+    margin-left: 30px;
     width: 100%;
   }
 
   ${device.tablet} {
     font-size: 22px;
-    margin-bottom: 60px;
+    margin-bottom: ${({ margin }) => margin || '60px'};
 
     ::before {
       height: 30px;
@@ -29,8 +33,7 @@ const TitleWithIcon = styled.h2<{ textColor?: string; iconColor?: string }>`
 
   ${device.desktop} {
     font-size: 30px;
-    margin-bottom: 90px;
-
+    margin-bottom: ${({ margin }) => margin || '90px'};
     ::before {
       height: 35px;
       width: 35px;

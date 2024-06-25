@@ -27,17 +27,17 @@ const Footer = () => {
         id="footer"
       >
         <FooterRow>
-          <Column size={2} title="Contacto">
-            <IconWithText text="Lunes a Domingo de 10:00 am - 11:00 pm">
+          <Column size={3} title="Contacto">
+            <IconWithText text="Lunes a Domingo de 10:00 am - 10:00 pm">
               <AiFillCalendar size={20} color="var(--color-blanco)" />
             </IconWithText>
             <IconWithText
-              text="Av. Sendero Divisorio 1001, Privadas de Anáhuac, Cerrada de Anáhuac Residencial, 66410 Cd Gral Escobedo, N.L."
-              link="https://goo.gl/maps/1KcmbkuN4WHjdfTE8"
+              text="Av. Eugenio Garza Sada Sur 3431, Sin Nombre de Col 42, 64845 Monterrey, N.L."
+              link="https://maps.app.goo.gl/ztKgQ6Db7pVk8RKD7"
             >
               <HiLocationMarker size={20} color="var(--color-blanco)" />
             </IconWithText>
-            <IconWithText text="+52 (818)-302-3018" link="tel: +528183023018">
+            <IconWithText text="+52 (818)-387-3888" link="tel: +528183873888">
               <BsFillTelephoneFill size={20} color="var(--color-blanco)" />
             </IconWithText>
           </Column>
@@ -65,7 +65,7 @@ const Footer = () => {
           <Column title="Siguenos">
             <SocialRow>
               <SocialLink
-                href="https://www.facebook.com/plazabellaanahuac/"
+                href="https://www.facebook.com/UrbanVillageOficial"
                 target="_blank"
                 fontSize="20px"
                 variant="rounded"
@@ -73,7 +73,7 @@ const Footer = () => {
                 <FaFacebookF />
               </SocialLink>
               <SocialLink
-                href="https://www.instagram.com/plazabellaanahuac"
+                href="https://www.instagram.com/urbanvillage_gs"
                 target="_blank"
                 fontSize="20px"
                 variant="rounded"

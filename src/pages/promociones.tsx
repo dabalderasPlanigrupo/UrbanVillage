@@ -1,6 +1,6 @@
 /* eslint-disable */
 import Hero404 from '@/components/Hero404';
-import HeroImage from '@/images/RECURSOS_FONDO_2.jpg';
+import HeroImage from '@/images/Locatario.png';
 import { Container } from '@/components/Utilities/container';
 import { LinksGrid } from '@/components/LinksGrid/linksGrid';
 import { PostType } from '@/types/posts';
